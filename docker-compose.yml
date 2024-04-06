@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  api:
+    build: ./api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api/model:/usr/src/app/model
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
